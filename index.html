@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2D Game</title>
+    <link href="style.css" rel="stylesheet"/>
+    <link href="victory.css" rel="stylesheet"/>
+
+    <!--cdn for fonts-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bubblegum+Sans">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+
+    <!--Bootstrap-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+
+<body class="body" onload="idleAnimationStart(); createBoxes();" onkeypress="keyCheck(event);">
+    <div class="background" id="background">
+
+        <img id="robot" src="resources/Idle (1).png" class="robot">
+        
+        <div class="score" >Score:&nbsp; </div>
+        
+        <div class="score1" id="score">0</div>
+    
+        <div class="timer" id="timer">
+            00:00
+        </div>
+
+        <div class="name" id="name">            
+             Player Name
+        </div>
+
+        <div class="pressEnter" id="pressEnter">
+            Press "Enter" To Start
+        </div>
+    </div>
+    
+    <!--Game over pane-->
+    <div class="end" id="end">
+        <div style="color: #e83225;">Game Over</div>
+        <div style="color: #e83225; font-size: 50px;">Your Score</div>
+        <div style="color: #e08b2f; font-size: 50px;" id="endScore">0</div>
+        
+        <div class="btnTryAgain">
+            <img onclick="reload();" class="imgRetry" src="resources/retry.png" alt="tryAgain">
+        </div>
+    </div>
+
+    <!--Game Start pane-->
+    <div class="start" id="start">
+
+        <div class="row" id="row1">
+            <div class="spaceJump"></div>
+        </div>        
+
+        <div class="playerName">
+            <div class="row" id="row1">
+                <h3>"Player Name"</h3> 
+            </div>
+            
+            <form>
+                <div class="row" id="row1">
+                    <input type="text" class="nameInput" id="playName" required>
+                </div>
+                
+                <div class="row" id="row1">
+                    <button class="subBtn" type="submit">
+                        <img src="resources/playBtn1.png" alt="playButton">
+                    </button>
+                </div>                
+            </form>
+        </div>
+    
+        <!--Start page Footer with Info and Audio buttons-->
+        <div class="footer">
+            <div class="info">
+                <img src="resources/infoBtn.png" id="infoBtn" onclick="infoShow();">
+            </div>
+            <div class="loudSpeaker">
+                <img onclick="changeImage();" src="resources/loudSpeaker.png" id="loudBtn">
+            </div>
+
+            
+        </div>
+
+        <!--Information Pane-->
+        <div class="infoPane" id="infoPane">
+            <h3>Instructions</h3><br>
+            <p>Welcome to Space Jump! Your goal is to navigate throught the obstacles and reach the end of each level.</p>
+            <p>Use the "Enter" key on your keyboard to run and press the space bar to jump over
+                 obstacles and avoid enemy attacks.</p>
+                        
+            <h5>Run = "Enter"</h5>
+            <h5>Jump = "Space Bar"</h5>
+
+            <p>Be careful - some obstacles are more difficult to jump over than others, and enemies
+                will attack you if you get too close</p>
+            <p>Good luck, and have fun playing Space Jump!</p>
+            
+        </div>       
+    </div>
+
+    <!--Game won pane-->
+    <div class="victory" id="victoryPane">
+        <h3 class="pn1">Player Name</h3>
+        <h3 class="winnerName" id="winnerName">Jerome</h3>
+        <h3 class="yourScore">Your Score</h3>
+        <h3 class="finalScore" id="finalScore">2000</h3>
+
+        <div class="retry" id="retry">
+            <img src="resources/retryButton.png" >
+        </div>
+
+        <div class="lobby" id="lobby">
+            <img src="resources/lobbyButton.png" >
+        </div>
+    </div>
+
+
+    <script src="script.js"></script>    
+</body>
+</html>

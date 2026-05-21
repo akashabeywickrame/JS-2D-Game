@@ -1,0 +1,67 @@
+.victory{
+    position: absolute;
+    width: 800px;
+    height: 550px;
+    margin-left: 25.5%;
+    margin-top: 60px;
+    justify-content: center;
+    text-align: center;
+    background-image: url("resources/gameWon1.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 600px;
+    display: none;
+    
+}
+
+.winnerName{
+    margin-left: 20px;
+    margin-top: 10px;
+    font-size: 40px;
+    text-shadow: 1px 1px 0 #fff, -1px -1px 0 #000;
+    color: #E7E6E6;
+    font-family: "Bubblegum Sans", sans-serif;
+}
+.pn1{
+    margin-top: 210px;
+    margin-left: 20px;
+    font-size: 35px;
+    text-shadow: 1px 1px 0 #fff, -1px -1px 0 #000;
+    color: #E7E6E6;
+    font-family: "Bubblegum Sans", sans-serif;
+}
+.yourScore{
+    margin-left: 20px;
+    font-size: 35px;
+    text-shadow: 1px 1px 0 #fff, -1px -1px 0 #000;
+    color: #E7E6E6;
+    font-family: "Bubblegum Sans", sans-serif;
+}
+.finalScore{
+    margin-left: 20px;
+    margin-top: -5px;
+    font-size: 40px;
+    text-shadow: 1px 1px 0 #fff, -1px -1px 0 #000;
+    color: #E7E6E6;
+    font-family: "Bubblegum Sans", sans-serif;
+}
+.retry img{
+    width: 150px;
+    margin-top: 5px;
+    margin-left: -25%;
+    cursor: pointer;
+    transition: transform 0.2s ease-out;
+    position: absolute;
+}
+.lobby img{
+    width: 148px;
+    margin-top: 5px;
+    margin-left: 7%;
+    cursor: pointer;
+    transition: transform 0.2s ease-out;
+    position: absolute;
+}
+.retry img:hover, .lobby img:hover{
+    transform: scale(1.1);
+}
